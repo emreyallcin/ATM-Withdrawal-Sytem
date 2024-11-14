@@ -1,0 +1,71 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #333;
+    margin: 0;
+}
+
+.atm {
+    width: 320px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    text-align: center;
+    font-size: 16px;
+}
+
+.keypad {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-top: 15px;
+}
+
+button {
+    padding: 15px;
+    font-size: 18px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+button:hover {
+    background-color: #ddd;
+}
+
+.cancelb {
+    background-color: red;
+    color: black;
+    
+}
+
+.correctb {
+    background-color: yellow;
+    color: black;
+}
+
+.confirmb {
+    background-color: rgb(0, 255, 13);
+    color: black;
+}
+
+#message {
+    margin-top: 20px;
+    color: #333;
+}

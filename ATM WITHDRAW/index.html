@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATM WITHDRAW</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="author" content="Emre YALCIN">
+</head>
+
+<body>
+    <div class="atm">
+
+        <div id="pinScreen">
+            <p>Please enter your PIN</p>
+            <input type="password" id="pinInput" placeholder="PIN" maxlength="4"><br><br>
+            <button onclick="atm.authenticateUser()" class="confirmb">Confirm</button>
+            <p id="pinMessage"></p>
+        </div>
+        <div id="withdrawScreen" style="display: none;">
+            <p>ENTER THE AMOUNT YOU WISH TO WITHDRAW</p>
+            <input type="text" id="withdrawAmount" placeholder="Amount" readonly>
+
+            <div class="keypad">
+                <button onclick="atm.inputDigit('1')" >1</button>
+                <button onclick="atm.inputDigit('2')" >2</button>
+                <button onclick="atm.inputDigit('3')" >3</button>
+                <button onclick="atm.cancelTransaction()" class="cancelb">Cancel</button>
+
+                <button onclick="atm.inputDigit('4')" >4</button>
+                <button onclick="atm.inputDigit('5')" >5</button>
+                <button onclick="atm.inputDigit('6')" >6</button>
+                <button onclick="atm.correctInput()" class="correctb">Correct</button>
+
+                <button onclick="atm.inputDigit('7')" >7</button>
+                <button onclick="atm.inputDigit('8')" >8</button>
+                <button onclick="atm.inputDigit('9')" >9</button>
+                <br>
+
+                <button onclick="atm.inputDigit('.')" >.</button>
+                <button onclick="atm.inputDigit('0')" >0</button>
+                <button onclick="atm.inputDigit('00')" >00</button>
+                <button onclick="atm.startWithdrawal()" class="confirmb">Confirm</button>
+            </div>
+
+            <p id="message"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
